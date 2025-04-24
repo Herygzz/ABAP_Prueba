@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+
+define behavior for zcp168details //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _child { create; }
+}
+
+define behavior for zc168Chdetails //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _parent;
+}

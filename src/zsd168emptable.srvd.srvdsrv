@@ -1,0 +1,5 @@
+@EndUserText.label: 'service defination for parent table'
+define service Zsd168emptable {
+  expose zcp168details  as ParentEntity;
+  expose zc168Chdetails as ChildEntity;
+}

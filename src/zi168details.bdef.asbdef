@@ -1,0 +1,21 @@
+managed implementation in class zbp_i168details unique;
+strict ( 2 );
+
+define behavior for zi168details //alias <alias_name>
+persistent table zpctable
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) Id;
+  //  field ( mandatory ) Age;
+  mapping for zpctable
+    {
+      Id      = id;
+      Name    = name;
+      Age     = age;
+    }
+}

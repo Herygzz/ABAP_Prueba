@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Def for ZC168DETAILS'
+define service ZSD168DETAILS {
+  expose zc168details as EmpDetails;
+}

@@ -1,0 +1,13 @@
+@Metadata.layer: #PARTNER
+annotate view zc168details with
+{
+  @UI.facet: [{id:'Id',purpose:#STANDARD,type: #IDENTIFICATION_REFERENCE,label:'Id',position: 10}]
+  @UI:{lineItem: [{ position:10,label:'Id' }],identification: [{ position:10,label:'Id'  }] }
+  Id;
+  @UI:{lineItem: [{ position:20,label:'Name' }],identification: [{ position:20,label:'Name'  }] }
+ // @Consumption.valueHelpDefinition: [{ entity : { name: 'zc168details', element: 'Name' } }]
+  Name;
+  @UI:{lineItem: [{ position:30,label:'Age' }],identification: [{ position:30,label:'Age'  }] }
+  Age;
+
+}

@@ -1,0 +1,28 @@
+unmanaged implementation in class zbp_ip168details unique;
+strict ( 2 );
+
+define behavior for zip168details //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) Id;
+  association _child { create; }
+}
+
+define behavior for zi168Chdetails //alias <alias_name>
+//late numbering
+lock dependent by _parent
+authorization dependent by _parent
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Refempid;
+  field (readonly : update)Addid;
+  association _parent;
+}
